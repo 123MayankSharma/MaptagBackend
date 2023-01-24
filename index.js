@@ -1,4 +1,5 @@
 const express = require("express");
+const cors=require('cors')
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const app = express();
@@ -6,7 +7,7 @@ const pinRoutes=require("./routes/pins")
 const userRoutes=require("./routes/users")
 
 dotenv.config();
-
+app.use(cors)
 app.use(express.json())
 
 mongoose
